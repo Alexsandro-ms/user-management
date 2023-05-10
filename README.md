@@ -36,13 +36,21 @@ SECRETKEY=`Sua key`
 A api tem os seguintes endpoints:
 
 router.get('/', HomeController.index);
+
 router.get('/user', AdminAuth, UserController.index);
+
 router.get('/user/:id', AdminAuth, UserController.findUser);
+
 router.post('/user', UserController.create);
+
 router.put('/user', UserController.edit);
+
 router.delete('/user/:id', AdminAuth, UserController.remove);
+
 router.post('/signin', UserController.signIn);
+
 router.post('/recoverpassword', UserController.recoverPassword);
+
 router.post('/changepassword', UserController.changePassword);
 
 Cada um responsável por executar uma tarefa, taís como: criar, editar, remover e até buscar usuários.
