@@ -7,7 +7,7 @@ Para executar o projeto, siga os seguintes passos:
 #### Clone este repositório em sua máquina:
 
 ```bash
-git clone https://github.com/exemplo/chat-socket.io.git
+https://github.com/Alexsandro-ms/user-management.git
 ```
 1. Instale as dependências do projeto utilizando o npm:
 
