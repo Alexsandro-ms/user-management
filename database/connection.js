@@ -1,19 +1,13 @@
-var knex = require('knex')({
+const dotenv = require("dotenv").config()
+
+const knex = require('knex')({
   client: 'mysql2',
   connection: {
-    host: 'localhost', // nome do serviço no docker-compose.yml
-    user: 'root',
-    password: 'password', // senha definida no docker-compose.yml
-    database: 'mydatabase' // nome do banco de dados definido no docker-compose.yml
-  },
-  // pool: {
-  //   min: 2,
-  //   max: 10
-  // },
-  // acquireConnectionTimeout: 5000, // tempo limite para conexão
-  // migrations: {
-  //   tableName: 'knex_migrations'
-  // }
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME
+  }
 });
 
 module.exports = knex;
